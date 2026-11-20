@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotización XV Años · Norkevin Photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f3eee4;
+  --bg-deep: #e8e1d2;
+  --cement: #c5bfb5;
+  --cement-dark: #8a847a;
+  --ink: #1a1715;
+  --ink-soft: #4d4439;
+  --ink-muted: #7e756a;
+  --gold: #b08d4f;
+  --gold-bright: #c9a05c;
+  --gold-deep: #8b6a32;
+  --bronze: #a87344;
+  --line: rgba(26, 23, 21, 0.1);
+  --line-strong: rgba(26, 23, 21, 0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: 7mm 14mm 6mm;
+  position: relative;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  padding: 0 0 6mm;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+}
+.brand {
+  font-size: 10px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.title-amp {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 300;
+}
+.fecha {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 400;
+  margin-top: 10px;
+}
+.fecha strong { font-weight: 500; color: var(--ink); }
+.venue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-top: 6px;
+  font-weight: 400;
+}
+.venue-divider {
+  display: inline-block;
+  margin: 0 10px;
+  color: var(--gold);
+}
+
+/* === INTRO === */
+.intro {
+  margin: 5mm 0 5mm;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  max-width: 150mm;
+  margin-left: auto;
+  margin-right: auto;
+}
+.intro-divider {
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 5mm;
+}
+
+/* === PACKAGES === */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5mm;
+  margin-bottom: 5mm;
+}
+.pkg {
+  background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.15));
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 5mm 5mm 6mm;
+  position: relative;
+  page-break-inside: avoid;
+}
+.pkg.featured {
+  background: linear-gradient(180deg, rgba(176, 141, 79, 0.10), rgba(176, 141, 79, 0.03));
+  border-color: rgba(176, 141, 79, 0.4);
+}
+.pkg.featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.pkg-label {
+  font-size: 8.5px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.pkg-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+.pkg-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+  min-height: 2.6em;
+}
+.pkg-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--gold-deep);
+  margin: 4px 0 10px;
+  letter-spacing: 0.5px;
+}
+.pkg-price-currency {
+  font-size: 19px;
+  color: var(--gold);
+  vertical-align: top;
+  margin-right: 2px;
+}
+.pkg-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 0 0 10px;
+}
+.pkg.featured .pkg-divider { background: rgba(176, 141, 79, 0.3); }
+.pkg-features { list-style: none; }
+.pkg-features li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  font-weight: 300;
+}
+.pkg-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 1px;
+  background: var(--gold);
+}
+.pkg-cta {
+  display: block;
+  margin-top: 9px;
+  padding: 9px 4px;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--gold-deep);
+  border: 1px solid rgba(176, 141, 79, 0.5);
+  border-radius: 2px;
+  background: transparent;
+  transition: background .2s, color .2s;
+}
+.pkg-cta:hover { background: var(--gold-deep); color: #fff; }
+.pkg.featured .pkg-cta {
+  background: var(--gold-deep);
+  color: #fff;
+  border-color: var(--gold-deep);
+}
+.pkg-anticipo {
+  margin-top: 7px;
+  font-size: 9.5px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* === NOTE / FOOTER === */
+.note-section {
+  margin-top: 4mm;
+  padding-top: 4mm;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.note-title {
+  font-size: 9px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.note-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15.5px;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  max-width: 150mm;
+  margin: 0 auto;
+}
+.cuentas {
+  display: flex;
+  justify-content: center;
+  gap: 8mm;
+  flex-wrap: wrap;
+  margin-top: 3mm;
+}
+.cuenta {
+  font-size: 10px;
+  color: var(--ink-muted);
+  letter-spacing: 0.4px;
+}
+.cuenta strong { color: var(--ink-soft); font-weight: 600; }
+.closing {
+  margin-top: 4mm;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink);
+  text-align: center;
+}
+.contact {
+  margin-top: 4mm;
+  padding-top: 4mm;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 10.5px;
+}
+.contact-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.contact-brand span { color: var(--gold); font-style: italic; }
+.contact-info {
+  text-align: right;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  line-height: 1.7;
+}
+.contact-info a { color: var(--ink-muted); text-decoration: none; }
+.contact-info strong { color: var(--ink-soft); font-weight: 500; }
+.foot-meta {
+  margin-top: 4mm;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #a8a29a;
+  padding-top: 3mm;
+  border-top: 1px solid #eee9e0;
+  white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .page { width: 100%; min-height: 0; padding: 10mm 6mm 8mm; }
+  .packages { grid-template-columns: 1fr; gap: 5mm; }
+  .pkg-sub { min-height: 0; }
+  .title { font-size: 40px; }
+  .contact { flex-direction: column; align-items: center; gap: 3mm; text-align: center; }
+  .contact-info { text-align: center; }
+}
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; padding: 12mm 14mm 10mm; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="brand">Norkevin Photography</div>
+    <h1 class="title">XV A<span class="title-amp">&ntilde;</span>os</h1>
+    <div class="fecha"><strong>Sábado</strong> &middot; 09 &middot; octubre &middot; 2027</div>
+    <div class="venue">
+      Casa Ariana<span class="venue-divider">&middot;</span>Ciudad de Guatemala
+    </div>
+  </header>
+
+  <p class="intro">
+    Gracias por considerar mi trabajo. Prepar&eacute; tres alternativas para que elijan la que mejor se adapte
+    a lo que quieren recordar de esta noche.
+  </p>
+  <div class="intro-divider"></div>
+
+  <section class="packages">
+    <div class="pkg">
+      <div class="pkg-label">Opci&oacute;n 1</div>
+      <h2 class="pkg-name">Esencial</h2>
+      <div class="pkg-sub">Solo fotografía, todo el evento cubierto</div>
+      <div class="pkg-price"><span class="pkg-price-currency">Q</span>13,500</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>2 fotógrafos profesionales</li>
+        <li>8 horas de cobertura</li>
+        <li>500 fotografías finales editadas</li>
+        <li>2 horas de sesión de fotos previa (día diferente)</li>
+        <li>Galería privada online con fotografías (2 años)</li>
+      </ul>
+      <a href="https://wa.me/50231648254?text=Hola%20Kevin%2C%20me%20interesa%20el%20paquete%20Esencial%20%28Q13%2C500%29%20para%20el%20XV%20a%26ntilde%3Bos%20del%20s%C3%A1bado%2009%20de%20octubre%20de%202027%20en%20Casa%20Ariana.%20Vamos%20a%20coordinarlo%3F" class="pkg-cta">Quiero este paquete</a>
+      <div class="pkg-anticipo">Anticipo 50% &middot; Q6,750</div>
+    </div>
+
+    <div class="pkg featured">
+      <div class="pkg-label">Opci&oacute;n 2 &middot; Recomendada</div>
+      <h2 class="pkg-name">Foto + Video</h2>
+      <div class="pkg-sub">La más pedida: foto y video, 8 horas cada uno</div>
+      <div class="pkg-price"><span class="pkg-price-currency">Q</span>20,500</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>2 fotógrafos · 8 horas de cobertura</li>
+        <li>600 fotografías finales editadas</li>
+        <li>1 videógrafo · 8 horas de cobertura</li>
+        <li>Video final de 7 minutos + reel de 1 minuto</li>
+        <li>2 horas de sesión de fotos previa (día diferente)</li>
+        <li>Galería privada online con fotografías (2 años)</li>
+      </ul>
+      <a href="https://wa.me/50231648254?text=Hola%20Kevin%2C%20me%20interesa%20el%20paquete%20Foto%20%2B%20Video%20%28Q20%2C500%29%20para%20el%20XV%20a%26ntilde%3Bos%20del%20s%C3%A1bado%2009%20de%20octubre%20de%202027%20en%20Casa%20Ariana.%20Vamos%20a%20coordinarlo%3F" class="pkg-cta">Quiero este paquete</a>
+      <div class="pkg-anticipo">Anticipo 50% &middot; Q10,250</div>
+    </div>
+
+    <div class="pkg">
+      <div class="pkg-label">Opci&oacute;n 3</div>
+      <h2 class="pkg-name">Cobertura Total</h2>
+      <div class="pkg-sub">Todo el día, con dos cámaras de video</div>
+      <div class="pkg-price"><span class="pkg-price-currency">Q</span>29,500</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>2 fotógrafos · 12 horas de cobertura</li>
+        <li>800 fotografías finales editadas</li>
+        <li>2 videógrafos · 12 horas de cobertura</li>
+        <li>Video final de 10 minutos + reel de 1 minuto</li>
+        <li>3 videos cortos para redes sociales</li>
+        <li>2 horas de sesión de fotos previa + 1 video editorial pre-evento</li>
+        <li>Galería privada online con fotografías (2 años)</li>
+      </ul>
+      <a href="https://wa.me/50231648254?text=Hola%20Kevin%2C%20me%20interesa%20el%20paquete%20Cobertura%20Total%20%28Q29%2C500%29%20para%20el%20XV%20a%26ntilde%3Bos%20del%20s%C3%A1bado%2009%20de%20octubre%20de%202027%20en%20Casa%20Ariana.%20Vamos%20a%20coordinarlo%3F" class="pkg-cta">Quiero este paquete</a>
+      <div class="pkg-anticipo">Anticipo 50% &middot; Q14,750</div>
+    </div>
+
+  </section>
+
+  <section class="note-section">
+    <div class="note-title">Informaci&oacute;n importante</div>
+    <p class="note-text">
+      Anticipo del 50% para reservar la fecha y el 50% restante al momento de la entrega final de las fotograf&iacute;as.
+      La cobertura se realizar&aacute; de acuerdo al horario coordinado; cualquier tiempo adicional podr&aacute; cotizarse por separado.
+      Horario extra: Q1,000 por hora.
+    </p>
+    <div class="cuentas">
+      <div class="cuenta"><strong>Banco Industrial</strong> &middot; 2140083086 &middot; Monetaria</div>
+      <div class="cuenta"><strong>Banrural</strong> &middot; 03968500356045 &middot; Monetaria</div>
+      <div class="cuenta"><strong>Promerica</strong> &middot; 32312060435586 &middot; Ahorro</div>
+    </div>
+  </section>
+
+  <div class="closing">Ser&aacute; un gusto acompa&ntilde;arte en este momento tan especial.</div>
+
+  <footer class="contact">
+    <div class="contact-brand">Norkevin <span>Photography</span></div>
+    <div class="contact-info">
+      <div><strong>norkevinfoto@gmail.com</strong></div>
+      <div>+502 3164 8254 &middot; @norkevin</div>
+      <div>norkevinphoto.com</div>
+    </div>
+  </footer>
+
+  <div class="foot-meta">
+    Cotizaci&oacute;n N&deg; 20261120 &middot; by Experience &middot; Emitida 20 · 11 · 2026 &middot; V&aacute;lida 30 d&iacute;as
+  </div>
+
+</div>
+</body>
+</html>
